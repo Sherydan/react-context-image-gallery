@@ -22,6 +22,7 @@ export const ImageProvider = ({ children }) => {
     const toggleLike = (id) => {
         const newImages = images.map((image) => {
             if (image.id === id) {
+                
                 return { ...image, liked: !image.liked };
             }
             return image;
