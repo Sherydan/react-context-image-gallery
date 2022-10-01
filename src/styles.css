@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 body {
   margin: 0;
 }
 
 .App {
-  font-family: "Maitree", serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   color: #43a047;
 }
 
+.active{
+  border-bottom: 0.2rem solid #fff;
+}
+
 h1 {
   margin-bottom: 0;
+}
+
+footer {
+  /* stick to the bottom
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; */
+  
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #43a047;
+  color: #fff;
 }
