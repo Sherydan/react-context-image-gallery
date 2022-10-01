@@ -19,6 +19,7 @@ const Gallery = () => {
                     onClick={() => toggleLike(image.id)}
                 >
                     <Heart filled={image.liked} />
+                    <p>{image.alt}</p>
                 </div>
             ))}
         </div>

@@ -23,6 +23,7 @@ const Favs = () => {
                             }}
                         >
                             <Heart filled={image.liked} />
+                            <p>{image.alt}</p>
                         </div>
                     ))}
             </div>
