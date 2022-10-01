@@ -1,14 +1,33 @@
-import React from 'react'
+import React from "react";
+
+import { useContext } from "react";
+import ImageContext from "../context/ImageContext";
+import Heart from "../components/Heart";
 
 const Favs = () => {
-  return (
-    <div>
-      <h1>Fotos favoritas</h1>
-      <div className="p-3 galeria grid-columns-4">
-       
-      </div>
-    </div>
-  )
-}
+    const { images } = useContext(ImageContext);
 
-export default Favs
+    return (
+        <div>
+            <h1>Fav Pictures</h1>
+            <div className="p-3 galeria grid-columns-4">
+                {/* shown only liked images */}
+                {images
+                    .filter((image) => image.liked)
+                    .map((image, i) => (
+                        <div
+                            key={i}
+                            className="foto"
+                            style={{
+                                backgroundImage: `url(${image.src.portrait})`,
+                            }}
+                        >
+                            <Heart filled={image.liked} />
+                        </div>
+                    ))}
+            </div>
+        </div>
+    );
+};
+
+export default Favs;
